@@ -1,0 +1,105 @@
+/*CSS for layout.erb*/
+header{
+display block
+width: 100%
+}
+
+
+h1 {
+  font: 35px;
+  font-family: sans-serif;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+  text-align:center;
+  padding-top:30px;
+  padding-bottom: 30px;
+  margin:0px;
+  }
+
+.nav_tab {
+  font-family: sans-serif;
+  color: white
+  font-weight: bold;
+  text-decoration: none;
+  list-style: none;
+  padding-left:0;
+  margin-top:0;
+}
+
+.nav_item a {
+  background-color: grey;
+  display: block;
+  border-color: white;
+  text-align: center;
+  margin-top: 2px;
+  padding-top:15px;
+  Padding-bottom: 15px;
+  font-size:20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+footer p{
+  background-color: black;
+  color: white;
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align:center;
+  font-family: sans-serif;
+}
+
+/*styles.css for contacts.erb*/
+h2 {
+  display:block;
+  background-color: salmon;
+  font-family: sans-serif;
+  font-size: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+}
+
+h2 span{
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+
+.contacts_listing {
+  display: block;
+  width: 95%;
+  background-color: lightblue;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-top: 20px;
+}
+
+.contact_detail {
+  list-style: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.contact_mods {
+  display:inline-block;
+  list-style: none;
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-bottom:20px;
+}
+
+#contact_delete a {
+  border-left-color: blue;
+  border-left-style: solid;
+}

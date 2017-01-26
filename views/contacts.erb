@@ -1,7 +1,9 @@
-<h1>All Contacts</h1>
+<h2>There are <span><%= Contact.all.count %></span> contacts</h2>
 
-<ul>
+<ul class="contacts_listing">
 <% Contact.all.each do |contact| %>
-  <li><%= contact.first_name %> <%= contact.last_name %> <%=contact.email%> <%=contact.note%></li>
+  <li class="contact_detail"><%= contact.first_name %> <%= contact.last_name %> (<%=contact.email%>) </li>
+  <li class="contact_mods"><a href="/contacts/edit">Edit</a></li>
+  <li class="contact_mods" id="contact_delete"><a href="/contacts/delete">Delete</a></li>
 <% end %>
 </ul>
