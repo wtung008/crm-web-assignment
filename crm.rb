@@ -37,7 +37,7 @@ post '/contacts' do
 end
 
 
-get '/contacts/1' do
-  @contact = Contact.find(1)
+get '/contacts/:id' do
+  @contact = Contact.find(params[:id].to_i)
   erb :show_contact
 end
