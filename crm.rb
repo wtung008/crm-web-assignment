@@ -82,3 +82,8 @@ delete '/contacts/:id' do
     raise Sinatra::NotFound
   end
 end
+
+#Closing the connection with SQLite
+after do
+  ActiveRecord::Base.connection.close
+end
