@@ -6,7 +6,7 @@ require_relative 'contact'
 require 'sinatra'
 
 ## Temporary fake data so that we always find contact with id 1.
-Contact.create('Betty', 'Maker', 'betty@bitmakerlabs.com', 'Developer')
+# Contact.create('Betty', 'Maker', 'betty@bitmakerlabs.com', 'Developer')
 
 
 #Contact.create('Mark', 'Zuckerberg', 'mark@facebook.com', 'CEO')
