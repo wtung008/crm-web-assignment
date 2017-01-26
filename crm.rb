@@ -33,12 +33,13 @@ end
 
 
 post '/contacts' do
+  #Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
   contact = Contact.create(
       first_name: params[:first_name],
       last_name:  params[:last_name],
       email:      params[:email],
       note:       params[:note]
-  )
+    )
   redirect to('/contacts')
 end
 
@@ -64,13 +65,12 @@ end
 
 # Handling put form submission
 put '/contacts/:id' do
-  @contact = Contact.find(params[:id].to_i)
-  if @contact
-    @contact.first_name = params[:first_name]
-    @contact.last_name = params[:last_name]
-    @contact.email = params[:email]
-    @contact.note = params[:note]
-
+  contact = Contact.find(params[:id].to_i)
+  if contact.update(
+    first_name: params[:first_name],
+    last_name:  params[:last_name],
+    email:      params[:email],
+    note:       params[:note])
     redirect to('/contacts')
   else
     raise Sinatra::NotFound
@@ -79,9 +79,9 @@ end
 
 # Deleting a contact
 delete '/contacts/:id' do
-  @contact = Contact.find(params[:id].to_i)
-  if @contact
-    @contact.delete
+  contact = Contact.find(params[:id].to_i)
+  if contact
+    contact.delete
     redirect to('/contacts')
   else
     raise Sinatra::NotFound
