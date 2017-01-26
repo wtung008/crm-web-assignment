@@ -73,23 +73,31 @@ h2 span{
 
 .contacts_listing {
   display: block;
-  width: 95%;
   background-color: lightblue;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0;
   padding-top: 20px;
+  margin-top: 0;
 }
 
 .contact_detail {
+  background-color: lightblue;
+  display:block;
   list-style: none;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 20px;
   padding-left: 20px;
+  border-top-color: white;
+  border-top-style: solid;
+  border-top-width: thick;
+  padding-top: 20px;
 }
 
 .contact_mods {
+  background-color: lightblue;
   display:inline-block;
   list-style: none;
   font-family: sans-serif;
@@ -102,4 +110,6 @@ h2 span{
 #contact_delete a {
   border-left-color: blue;
   border-left-style: solid;
+  padding-left:20px;
+
 }
