@@ -33,7 +33,12 @@ end
 
 
 post '/contacts' do
-  Contact.create(params[:first_name], params[:last_name], params[:email], params[:note])
+  contact = Contact.create(
+      first_name: params[:first_name],
+      last_name:  params[:last_name],
+      email:      params[:email],
+      note:       params[:note]
+  )
   redirect to('/contacts')
 end
 
@@ -83,7 +88,7 @@ delete '/contacts/:id' do
   end
 end
 
-#Closing the connection with SQLite
+#Closes the connection with SQLite database after each request has been responded to. Avoid a "time-out" error in subsequent sessions (the 6th session).
 after do
   ActiveRecord::Base.connection.close
 end
